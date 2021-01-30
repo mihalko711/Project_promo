@@ -1,0 +1,15 @@
+﻿<Window x:Class="Schedule_.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schedule_"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Расписание Бета" Height="600" Width="1000">
+    <Grid Background="#E0FFFF">
+        <Button x:Name="teachers" Content="Листать преподов" HorizontalAlignment="Center" Margin="0,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,0.603" BorderBrush="#FF3C7DCB" Background="#FF3C7DCB" Height="49" Width="134" Click="teachers_click" Cursor="Hand"/>
+        <Button x:Name="schedule" Content="Расписание" HorizontalAlignment="Center" Height="49" Margin="0,217,0,0" VerticalAlignment="Top" Width="134" BorderBrush="#FF3C7DCB" Background="#FF3C7DCB" Click="schedule_click"/>
+    </Grid>
+</Window>

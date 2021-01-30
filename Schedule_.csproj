@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="data\**" />
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="data\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="data\**" />
+    <None Remove="Migrations\**" />
+    <Page Remove="data\**" />
+    <Page Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Database1.mdf" />
+    <None Remove="Database1_log.ldf" />
+    <None Remove="dbo.Table.sql" />
+    <None Remove="Teachers.mdf" />
+    <None Remove="Teachers_log.ldf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\202101290917042_InitialCreate.cs" />
+    <Compile Include="Migrations\202101290917042_InitialCreate.Designer.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101290917042_InitialCreate.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.30" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2387" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

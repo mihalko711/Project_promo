@@ -1,0 +1,17 @@
+﻿<Window x:Class="Schedule_.ScheduleWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schedule_"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ScheduleWindows" Height="900" Width="900">
+    <Grid Background="#E0FFFF">
+        <TextBox x:Name="group" materialDesign:HintAssist.Hint="номер группы" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Margin="33,41,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" CaretBrush="#FF3C7DCB"/>
+        <Button x:Name="sched_form" Content="Расписание" HorizontalAlignment="Left" Margin="39,106,0,0" VerticalAlignment="Top" Click="schedf_click" Background="#FF3C7DCB" BorderBrush="#FF3C7DCB"/>
+        <Button x:Name="sched_exit" Content="Выход" HorizontalAlignment="Left" Margin="56,200,0,0" VerticalAlignment="Top" Click="sched_exit_click" BorderBrush="#FF3C7DCB" Background="#FF3C7DCB"/>
+        <ListBox x:Name="raspis" Style="{StaticResource MaterialDesignListBox}" Margin="240,53,56,174" BorderBrush="#FF3C7DCB">
+        </ListBox>
+    </Grid>
+</Window>
