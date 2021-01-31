@@ -30,7 +30,7 @@ namespace Schedule_
 
         private void teachers_list_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (teachers_list.SelectedItem != null)
+            if (teachers_list.SelectedItem != null && teachers_list.SelectedItem.ToString() != "пустовато")
             {
                 citates_portraits.Visibility = Visibility.Visible;
                 using (var context = new ContextDB())
@@ -62,6 +62,10 @@ namespace Schedule_
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Станет кликабельным, когда вы добавите препода");
             }
         }
 
@@ -152,7 +156,7 @@ namespace Schedule_
 
         private void find_results_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (find_results.SelectedItem != null)
+            if (find_results.SelectedItem != null && find_results.SelectedItem.ToString() != "пустовато")
             {
                 citates_portraits.Visibility = Visibility.Visible;
                 using (var context = new ContextDB())
@@ -184,6 +188,10 @@ namespace Schedule_
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Станет кликабельным, когда вы добавите препода");
             }
         }
 
