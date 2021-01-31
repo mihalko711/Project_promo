@@ -28,11 +28,14 @@
   <ItemGroup>
     <Compile Include="Migrations\202101290917042_InitialCreate.cs" />
     <Compile Include="Migrations\202101290917042_InitialCreate.Designer.cs" />
+    <Compile Include="Migrations\202101312020312_Description.cs" />
+    <Compile Include="Migrations\202101312020312_Description.Designer.cs" />
     <Compile Include="Migrations\Configuration.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101290917042_InitialCreate.resx" />
+    <EmbeddedResource Include="Migrations\202101312020312_Description.resx" />
   </ItemGroup>
 
   <ItemGroup>
