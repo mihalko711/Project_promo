@@ -7,13 +7,13 @@ namespace Schedule_.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Pyotr : IMigrationMetadata
+    public sealed partial class Description : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Pyotr));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Description));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101291630134_Pyotr"; }
+            get { return "202101312020312_Description"; }
         }
         
         string IMigrationMetadata.Source

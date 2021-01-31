@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Pyotr : DbMigration
+    public partial class Description : DbMigration
     {
         public override void Up()
         {
@@ -13,7 +13,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         TeacherId = c.Int(nullable: false),
-                        DescriptionTeacher = c.String(),
+                        Portrait = c.String(),
                         Citate = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
