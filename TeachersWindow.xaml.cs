@@ -189,18 +189,25 @@ namespace Schedule_
 
         private void send_portrait_Click(object sender, RoutedEventArgs e)
         {
-            if(portrait_text.Text != "")
+            if(portrait_text.Text != "" && id_holder != null)
             {
-                using(var context = new ContextDB())
+                using (var context = new ContextDB())
                 {
-                    var description = new Description()
+                    if (context.Teachers.Count() != 0)
                     {
-                        TeacherId = id_holder,
-                        Portrait = portrait_text.Text
-                    };
-                    portrait_text.Text = "";
-                    context.Descriptions.Add(description);
-                    context.SaveChanges();
+                        var description = new Description()
+                        {
+                            TeacherId = id_holder,
+                            Citate = portrait_text.Text
+                        };
+                        portrait_text.Text = "";
+                        context.Descriptions.Add(description);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Странно, но преподаватели отсутствуют");
+                    }
 
                 }
             }
@@ -212,14 +219,21 @@ namespace Schedule_
             {
                 using (var context = new ContextDB())
                 {
-                    var description = new Description()
+                    if(context.Teachers.Count() != 0)
                     {
-                        TeacherId = id_holder,
-                        Citate = citate_text.Text
-                    };
-                    citate_text.Text = "";
-                    context.Descriptions.Add(description);
-                    context.SaveChanges();
+                        var description = new Description()
+                        {
+                            TeacherId = id_holder,
+                            Citate = citate_text.Text
+                        };
+                        citate_text.Text = "";
+                        context.Descriptions.Add(description);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Странно, но преподаватели отсутствуют");
+                    }
 
                 }
             }
